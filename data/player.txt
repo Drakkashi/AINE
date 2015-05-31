@@ -1,0 +1,30 @@
+
+Player:{
+	start: firstRoom
+	name: "Player"
+	image: "img_player"
+	desc: "This is the Player object. The player moves around when the navigation buttons are clicked. This is also how enter- and leave room events are triggered.<br />You can change the player portrait by changing the code, or replace the image with another."
+	gender: "male"
+	tooltip: "This is the player portrait"
+
+	items: playerItem
+
+	moves: 0
+
+	Event:"Examine"
+	{
+		display(this)
+	}
+
+	Event: Game_Start {
+		display([
+			"This game is a preview game to help you get an idea of what can be done with the engine. Please take some time to look through the files in the data folder to see how these different functions are implemented.",
+			"Also feel free to make additions or changes to the code in order to see how the changes apply.<br />Should you want to add additional images to the image library of the game, please see how this is done in the config file.",
+			"And do check out the website for help and examples on how to make your own rich game experience.<br /><br />www.drakkashi.com/aine"
+		])
+	}
+
+	Event:Enter_Room {
+		print(moves++)
+	}
+}

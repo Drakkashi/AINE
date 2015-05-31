@@ -1,0 +1,39 @@
+
+Item:charItem
+	// This item has been assigned to a character object, and is not visual to the player on the interface.
+	// Items carried by characters to not show. But you can still check whether characters have certain items with the hasItem method, and drop them so the player might pick them up with the dropItem method.
+	// You do not need {} (bracers) if you are not assigning any values. This is particularly useful for items, which might not be more than a simple prop
+
+Item:roomItem
+
+Item:playerItem {
+	// No property is required for the game to run
+	// For instance, if the object property name is not assigned any value, the instance of the given item will be used as its name too.
+	// For Character, Room and Player items, a missing value for the image property means no image will be shown for that particular object.
+
+	Event: Game_Start {
+		disableEvent("Take")
+			// This event is triggered after all objects have been loaded, but before the game actually starts.
+			// In this case it is used to disable the "Take" event on this item, as the item starts on the player.
+			// This event could also be used to move this or other items around after being loaded. Various other things can be done with this event to help set the stage of your game
+			// All objects can have a Game_Start event, and they will be triggered in the same sequence as the objects are loaded.
+			// You can control the sequence in which code is loaded by changing the order of the files in the config file
+	}
+
+	Event: "Drop" {
+		player.dropItem(this)
+			// Moves the item from the player and to the room the player is currently in.
+			// Should the player in fact not have the item, it will not be moved.
+
+		disableEvent("Drop")
+		enableEvent("Take")
+	}
+	
+	Event: "Take" {
+		player.giveItem(this)
+			// Moves the item from anywhere to the player
+
+		disableEvent("Take")
+		enableEvent("Drop")
+	}
+}
