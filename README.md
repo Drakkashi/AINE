@@ -8,6 +8,10 @@ The Engine comes with a customizable Graphical User Interface (GUI) for games ma
 
 It has been a challenge to design an Engine with a low entry berrier and learning curve, while also supplying functions for advanced usage.
 
+# Getting started
+
+See the Wiki on how to get started, in addition to examples on how to make several more common interactions for your game.
+
 # References
 
 See <http://www.drakkashi.com/aine/references.php> for AINE Language References
