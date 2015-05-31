@@ -1,0 +1,28 @@
+
+Character: char1{
+	name: "Sandra"
+	gender: "female"
+	tooltip: "This is Sandra"
+	hairColor: "red"
+	
+	items: charItem
+	
+	Event: "Examine" {
+		display(tooltip + ", she has " + hairColor + " hair.")
+			// You can combine strings of text. In this example the properties hairColor and tooltip of char1 is combined together with some addition text to create a dynamic output.
+			// If the tooltip of hairColor of Sandra was changed, so would the displayed text respectively.
+	}
+}
+
+Character: char2{
+	name: "Alex"
+	desc: "This is the description of Alex being displayed. Check the code in the character.txt file for an example of how it is done"
+	gender: "male"
+	tooltip: "This is Alex"
+		
+	Event: "Examine" {
+		display(desc)
+			// Displays the description of the object char2, which is Alex. char2.desc is equivalent to using the char2.getDesc() method
+			// You can assign a new description this way: char2.desc = "Some new description of Alex"
+	}
+}

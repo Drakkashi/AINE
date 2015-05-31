@@ -1,0 +1,261 @@
+AINE - Accelerated Interactive Narrator Engine
+
+version:	0.8.0 BETA
+author:		Daniel Svejstrup Christensen
+website:	http://www.drakkashi.com/aine/
+
+Please see the website for updates and help
+
+
+------------------------------------------
+
+Change Log
+
+------------------------------------------
+
+==========================================
+0.9.0	- 20. March 2015
+==========================================
+
+A module system has been implemented which allows for easy implementation of custom as3 scripts for the engine
+
+Default module Background has been added, together with following functions
+
+	Background.black()
+	Background.color()
+	Background.white()
+
+Default module GUI has been added, together with following functions
+
+	GUI.playerVisible()
+	GUI.roomTitleVisible()
+	GUI.roomItemsVisible()
+	GUI.charsVisible()
+	GUI.navVisible()
+	GUI.setNav()
+	GUI.mouseX()
+	GUI.mouseY()
+	GUI.addObj()
+	GUI.removeObj()
+	GUI.scale()
+	GUI.scaleX()
+	GUI.scaleY()
+	
+Config file XML attributes now start with lower case letters instead of uppercase
+
+New aspect ratio (960x640)
+
+Interface elements will now rearrange to fit he respective stage size when changed in the Adobe Flash file
+
+Added hide/show toggle for text box when displayed with a background image
+
+Added an additional argument to display() and endGame(). The new argument will control whether the parsed image is displayed as background or above text box
+
+For loop syntax has been added to the engine
+
+Modulo (%) syntax has been added to the engine
+
+Conditional (?:) syntax has been added to the engine
+
+Improved stability and performance
+
+Better processing feedback on extensive script processing
+
+Lots of visual tweaks
+
+Some methods and properties of Lists and Strings can now be accessed
+
+	list.length
+	list.indexOf()
+	list.join()
+	string.length
+	string.indexOf()
+	string.charAt()
+	string.substr()
+	string.substring()
+	string.split()
+	string.replace()
+	string.toLowerCase()
+	string.toUpperCase()
+
+
+==========================================
+0.8.0	- 24. November 2014
+==========================================
+
+Improved stability and performance
+
+extends identifier has been added. extends can be used to allow an object to inherit the event objects of another object
+
+\n can now be used in text to simulate newlines
+
+\t can now be used in text to simulate tab
+
+
+==========================================
+0.7.1	- 3. November 2014
+==========================================
+
+The placement of the event drop down list has been improved
+
+
+==========================================
+0.7.0	- 2. November 2014
+==========================================
+
++ (addition) and += (add assign) operations can now be used to combine lists
+
+dropItem function now takes no less than 1 argument
+
+displaySpeech function has been updated
+
+	* The order of arguments have changed
+	* Can now take up to 4 arguments
+
+New methods have been added to the script language
+
+	* object.showEvents()
+	* container.getItems()
+	* container.setItems()
+	* person.dropItems()
+	* room.enterRoom()
+	* room.getChars()
+	* room.getPaths()
+	* room.setChars()
+	* room.allObjects()
+
+
+==========================================
+0.6.2	- 28. October 2014
+==========================================
+
+Characters objects with default gender portraits now look to the left when their portrait is displayed by displaySpeech function
+
+Mouse wheel scroll will now be disabled for the list containing the object you are interacting with
+
+
+==========================================
+0.6.1	- 25. October 2014
+==========================================
+
+New methods has been added to the script language
+
+	* object.isEnabled()
+	* object.trigger()
+
+New functions has been added to the script language
+
+	* displaySpeech()
+	* screenMessage()
+
+The engine will now drop the whole stack of events when an event performs an error
+
+FPS has been changed from 24 to 60
+
+The mouse wheel can be used to scroll displayed text if the text is too long to fit within the text field
+
+When displaying text, if the text is too long to fit within the text field it will be scrolled on mouse click instead of it continuing
+
+When displaying text, the text field will now expand to fit more text in it
+
+The mouse wheel can be used to scroll saved games, item, and character lists
+
+A scroll bar has been added to the saved games, item, and character lists on the user interface to avoid out of bound elements
+
+Mouse over feedback has been added to item lists on the user interface
+
+Updated the user interface with more fitting fonts
+
+The Esc key can now be used to close prompt windows, the game over menu, and the save- and load screens
+
+Added a new generic object type Object to the engine
+
+The syntax now understands local scope
+
+this identifier has been added to the syntax, and refers to the parent object of the Event object
+
+While loop and for each loop have been added to the script syntax
+
+New line operator ; (semicolon) has been added to the script syntax
+
+Added a separate console program for debugging
+
+
+==========================================
+0.5.1	- 2. October 2014
+==========================================
+
+New methods have been added to the script language
+
+	* object.setName()
+	* object.setImage()
+	* object.setDesc()
+	* object.setTooltip()
+	* object.getName()
+	* object.getImage()
+	* object.getDesc()
+	* object.getTooltip()
+	* object.currentRoom()
+	* object.enableEvent()
+	* object.disableEvent()
+	* person.setGender()
+	* person.getGender()
+	* person.dropItem()
+	* person.moveTo()
+	* item.moveTo()
+	* item.remove()
+	* character.remove()
+	* container.hasItem()
+	* container.giveItem()
+	* room.setPath()
+	* room.getPath()
+
+New functions have been added to the script language
+
+	* print()
+	* showTooltip()
+	* hideTooltip()
+	* displayImage()
+	* display()
+	* endGame()
+
+New calculation functions have been added to the script language
+
+	* abs()
+	* ceil()
+	* floor()
+	* pow()
+	* rand()
+	* round()
+	* sqrt()
+
+Math, assign and condition operators have been added to the script syntax
+
+A new script syntax can be used within Event objects to code for dynamical changes within the game
+
+Event objects have been added
+
+	* Game_Start
+	* Enter_Room
+	* Enter_Room_First
+	* Leave_Room
+	* Leave_Room_First
+	* Mouse_Click
+	* Mouse_Over
+	* Mouse_Out
+	* Nav_Click
+	* Nav_Over
+	* Nav_Out
+
+<Interface@Nav> has been moved to <Game@Nav>
+
+<Interface> has been removed, but will return with different purpose
+
+Object properties can now contain lists
+
+Lists can be multidimensional by creating lists within lists
+
+------------------------------------------
+__________________________________________
+This software is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+Copyright © 2014 Drakkashi.com
