@@ -8,7 +8,7 @@ The current version is based on Adobe Flash, and an HTML5 version is being plann
 
 # Getting started
 
-After you have downloaded the Engine, you should go to the AINE Wiki, in order to learn how to best use the Engine.
+After you have downloaded the Engine, you should go to the [AINE Wiki](https://github.com/Drakkashi/AINE/wiki), in order to learn how to best use the Engine.
 
 * [AINE Engien Download](http://www.drakkashi.com/aine/download.php)
 * [AINE Language References](http://www.drakkashi.com/aine/references.php)
