@@ -12,4 +12,4 @@ After you have downloaded the Engine, you should go to the [AINE wiki](https://g
 
 * [AINE Engien Download](http://www.drakkashi.com/aine/download.php)
 * [AINE Language References](http://www.drakkashi.com/aine/references.php)
-* [AINE Code Examples](https://github.com/Drakkashi/AINE/wiki)
+* [AINE Wiki](https://github.com/Drakkashi/AINE/wiki)
